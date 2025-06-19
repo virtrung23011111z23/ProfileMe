@@ -1,0 +1,48 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  --primary-color: #fcdc6c;
+}
+
+.App {
+  display: flex;
+  height: 100vh;
+  gap: 1.5rem;
+}
+
+.ProfileCard {
+  position: sticky;
+  top: 0;
+}
+
+.InformationBox {
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.InformationBox::-webkit-scrollbar {
+  display: none;
+}
+
+.InformationBox {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+@media screen and (max-width:766px) {
+    .App{
+      flex-direction: column;
+    }
+    #root {
+      padding: 0rem;
+    }
+}
+@media screen and (min-width:768px) and (max-width:1280px) {
+    .App{
+      flex-direction: column;
+    }
+    #root {
+      padding: 0rem;
+    }
+}

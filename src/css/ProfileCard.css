@@ -1,0 +1,198 @@
+.sibar-me {
+    position: relative;
+    background-color: rgb(29, 29, 29);
+    color: #fff;
+    padding: 20px;
+    margin: auto;
+    border-radius: 15px;
+    border: 1px solid #474747;
+    overflow: hidden;
+}
+
+.menu-navbar {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    color: var(--primary-color);
+    border-end-start-radius: 13px;
+    padding: 10px;
+    border-bottom: 0.5px solid #474747;
+    border-left: 0.5px solid #474747;
+    display: none;
+}
+
+.sibar-me img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.description-about {
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+}
+
+.about-me {
+    display: flex;
+    gap: 1rem;
+    margin-top: 20px;
+    align-items: center;
+}
+
+.icon-about {
+    background-color: rgb(31, 30, 30);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    flex-shrink: 0;
+    box-shadow: -4px 8px 30px 4px rgba(0, 0, 0, 0.3);
+    border-radius: 12px;
+    border-top: 0.5px solid #474747;
+    border-left: 0.5px solid #474747;
+}
+
+.icon-about svg {
+    color: var(--primary-color);
+}
+
+.line-about {
+    background-color: #757575;
+    width: 80%;
+    height: 1px;
+    margin: 10px auto;
+}
+
+.description-about {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.description-about p {
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+}
+
+.title-about {
+    color: #ccc;
+    font-size: 13px;
+}
+
+.icon-mxh {
+    display: flex;
+    gap: 1rem;
+    margin: 2rem auto;
+    justify-content: center;
+}
+.icon-mxh a{
+    color: var(--primary-color);
+}
+.items-icons-mxh {
+    font-size: 24px;
+}
+.info-list-container {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(-10px);
+  
+  /* Thời gian chuyển (duration) 0.3s, easing ease-out có cảm giác mềm mại hơn */
+  transition: 
+    max-height 0.3s ease-out, 
+    opacity 0.3s ease-out, 
+    transform 0.3s ease-out;
+  
+  /* Khoảng cách phía trên để có “khoảng trống” ban đầu khi đóng */
+  margin-top: 0;
+}
+
+
+.info-list-container.open {
+  max-height: 600px; 
+  /* Cho hiện nội dung rõ ràng */
+  opacity: 1;
+  /* Trượt từ -10px xuống 0px */
+  transform: translateY(0);
+  /* nếu muốn tách phần margin-top khi mở */
+  margin-top: 12px;
+}
+
+@media screen and (max-width:768px) {
+    .add-me {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        gap: 0.5em;
+    }
+
+    .sibar-me img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .file-name {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .file-name h2 {
+        margin: 10px auto;
+        font-size: 18px;
+    }
+
+    .menu-navbar {
+        display: block;
+    }
+    .line-about {
+        margin: 30px auto;
+    }
+    .icon-mxh {
+        display: none;
+    }
+}
+@media screen and (min-width:768px) and (max-width:1280px) {
+   .add-me {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        gap: 0.5em;
+    }
+
+    .sibar-me img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .file-name {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .file-name h2 {
+        margin: 10px auto;
+        font-size: 18px;
+    }
+
+    .menu-navbar {
+        display: block;
+    }
+    .line-about {
+        margin: 30px auto;
+    }
+    .icon-mxh {
+        display: none;
+    }
+}
+@media screen and (min-width:1280px) {
+    .sibar-me img {
+        width: 150px;
+        height: 150px;
+    }
+    .sibar-me {
+        width: 270px;
+    }
+}

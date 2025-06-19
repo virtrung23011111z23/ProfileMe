@@ -1,0 +1,110 @@
+.Page {
+    background-color: rgb(29, 29, 29);
+    color: #fff;
+    padding: 20px;
+    margin: auto;
+    border-radius: 20px;
+    border: 1px solid #474747;
+}
+
+
+@media screen and (max-width:766px) {
+    .navbar {
+        position: absolute;
+        display: flex;
+        gap: 1em;
+        bottom: 0px;
+        left: -0px;
+        width: 100%;
+        box-shadow: none;
+        background: hsla(240, 1%, 17%, 0.75);
+        backdrop-filter: blur(10px);
+        border: 1px solid #474747;
+        z-index: 1;
+    }
+
+    .Page {
+        margin-bottom: 100px;
+    }
+}
+
+@media screen and (min-width:768px) and (max-width:1280px) {
+   .navbar {
+        position: absolute;
+        display: flex;
+        justify-content: space-between;
+        gap: 1em;
+        top: 0px;
+        left: -0px;
+        width: 100%;
+        box-shadow: none;
+        background: hsla(240, 1%, 17%, 0.75);
+        backdrop-filter: blur(10px);
+        border: 1px solid #474747;
+        border-bottom-right-radius: 20px;
+        border-top-left-radius: 20px;
+        z-index: 1;
+    }
+    .Page {
+        position: relative;
+        margin-bottom: 100px;
+        padding-top: 70px;
+    }
+}
+
+@media screen and (min-width:1280px) {
+    .Page {
+        position: relative;
+        min-width: 900px;
+    }
+
+    .navbar {
+        position: absolute;
+        display: flex;
+        gap: 1em;
+        bottom: auto;
+        top: 0;
+        left: auto;
+        right: 0;
+        width: max-content;
+        border-radius: 0 20px;
+        padding: 0 20px;
+        box-shadow: none;
+        background: hsla(240, 1%, 17%, 0.75);
+        backdrop-filter: blur(10px);
+        border: 1px solid #474747;
+        z-index: 1;
+
+    }
+}
+
+.navbar>button {
+    padding: 20px;
+    font-size: 1em;
+    font-weight: 500;
+    font-family: inherit;
+    cursor: pointer;
+    transition: border-color 0.25s;
+    background: transparent;
+    border: none;
+    color: #fff;
+
+}
+
+.title-page {
+    position: relative;
+    text-align: start;
+    margin: 0px 0px 20px 0px;
+    padding-bottom: 20px;
+}
+
+.title-page::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 40px;
+    height: 5px;
+    background-color: var(--primary-color);
+    border-radius: 10px;
+}

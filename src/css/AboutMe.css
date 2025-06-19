@@ -1,0 +1,128 @@
+.about-me-page {
+    text-align: start;
+}
+
+.Service-List {
+    display: grid;
+    gap: 2rem;
+}
+
+.Service-Item {
+    background-color: rgb(31, 30, 30);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: start;
+    flex-shrink: 0;
+    gap: 1rem;
+    box-shadow: -4px 8px 30px 4px rgba(0, 0, 0, 0.3);
+    border-radius: 12px;
+    border-top: 0.5px solid #474747;
+    border-left: 0.5px solid #474747;
+    padding: 20px;
+}
+
+.Content-Service span {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.Contact-Customer-list {
+    display: flex;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* 1. Đặt độ dày của scrollbar (px) */
+.Contact-Customer-list::-webkit-scrollbar {
+    height: 5px;
+    margin: 0 50px;
+}
+
+.Contact-Customer-list::-webkit-scrollbar-track-piece {
+    background: hsla(240, 1%, 17%, 0.75);
+    border-radius: 2.5px;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+}
+
+/* 3. Đặt màu và bo góc cho thumb (phần “cục” kéo) */
+.Contact-Customer-list::-webkit-scrollbar-thumb {
+    background-color: var(--primary-color);
+    border-radius: 4px;
+}
+
+.Customer-contact {
+    scroll-snap-align: start;
+    /* mỗi lần dừng sẽ align item đầu vào vị trí */
+    box-sizing: border-box;
+    padding: 0.5rem;
+    /* margin giữa các thẻ */
+}
+.Customer-contact{
+    position: relative;
+    background-color: rgb(31, 30, 30);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: start;
+    flex-shrink: 0;
+    box-shadow: -4px 8px 30px 4px rgba(0, 0, 0, 0.3);
+    border-radius: 12px;
+    border-top: 0.5px solid #474747;
+    border-left: 0.5px solid #474747;
+    padding: 20px;
+    margin-left: 2rem;
+}
+.Customer-contact img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position:absolute;
+    top: -50px;
+    left: 10px;
+    z-index: 1;
+}
+.Customer-contact h2{
+    margin: 0;
+}
+.Customer-contact p {
+    color:#aaaaaa;
+    margin:0px;
+    display: -webkit-box;
+    -webkit-line-clamp:2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.Content-Service p{
+    color:#aaaaaa;
+}
+@media screen and (max-width:768px) {
+    .Service-List {
+    grid-template-columns: repeat(1, 1fr);
+    }
+    .Customer-contact {
+    width: calc(100% - 1rem);
+    }
+}
+@media screen and (min-width:768px) and (max-width:1280px) {
+    .Service-List {
+    grid-template-columns: repeat(2, 1fr);
+    }
+    .Customer-contact {
+    width: calc(50% - 1rem);
+    }
+}
+@media screen and (min-width:1280px) {
+    .Service-List {
+    grid-template-columns: repeat(2, 1fr);
+    }
+     .Customer-contact {
+    width: calc(50% - 1rem);
+    }
+}

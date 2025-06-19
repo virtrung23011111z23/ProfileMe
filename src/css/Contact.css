@@ -1,0 +1,56 @@
+.Contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.Contact-Information {
+    width: 100%;
+    display: flex;
+    gap: 2rem;
+}
+
+.form-input {
+    flex: 1;
+    background: none;
+    color: hsl(0, 0%, 98%);
+    font-size: 15px;
+    font-weight: 400;
+    ;
+    padding: 20px 20px;
+    border: 1px solid hsl(0, 0%, 22%);
+    border-radius: 14px;
+    outline: none;
+}
+
+.form-area {
+    flex: 1;
+    background: none;
+    color: hsl(0, 0%, 98%);
+    font-size: 15px;
+    font-weight: 400;
+    ;
+    padding: 40px 20px;
+    border: 1px solid hsl(0, 0%, 22%);
+    border-radius: 14px;
+    outline: none;
+}
+
+.form-submit {
+  margin: 0 auto;
+  width: max-content;
+  background: none;
+  font-size: 18px;
+  color: var(--primary-color);
+  padding: 20px;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem; /* khoảng cách giữa icon và text */
+}
+
+.rotated-icon {
+  display: inline-block;          /* bắt buộc để transform */
+  transform: rotate(-55deg);       /* xoay 75 độ */
+  transition: transform 0.3s ease;/* nếu muốn hiệu ứng mượt */
+}
